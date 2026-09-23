@@ -1,0 +1,23 @@
+# Guess-It-1 (Python Solution)
+
+A real-time predictive streaming application built in Python that utilizes statistical analysis (moving averages and standard deviation) to forecast numerical sequences.
+
+---
+
+## 📋 Overview
+
+The **`guess-it-1`** project acts as a real-time stream processor. It reads numbers sequentially from standard input (`sys.stdin`), updates an adaptive statistical model, and immediately outputs a predicted range (lower and upper limits) for the next incoming value.
+
+---
+
+## 🛠️ Project Structure
+
+Ensure your project directory is organized as follows:
+
+```text
+guess-it/
+│
+├── student/
+│   └── solution.py       # Your core Python prediction script
+├── script.sh             # Executable shell runner script at the root
+└── README.md             # Project documentation
