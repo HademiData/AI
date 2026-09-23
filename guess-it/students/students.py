@@ -32,8 +32,8 @@ def main():
         n = len(history)
 
         if n == 1:
-            lower = int(val - 70)
-            upper = int(val + 70)
+            lower = int(val - 50)
+            upper = int(val + 50)
 
         else:
             window = history[-30:] if n >30 else history
@@ -42,10 +42,8 @@ def main():
             var = variance(window, mean, len(history))
             std = standardDeviation(var)
 
-            margin = max(std * 1.8, 15)
-
-            lower = int(round(mean - margin))
-            upper = int(round(mean + margin))
+            lower = int(round(mean - std))
+            upper = int(round(mean + std))
 
             if lower > upper:
                 lower, upper = upper, lower

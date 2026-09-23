@@ -38,13 +38,13 @@ def main():
     denom_x = sum((x - mean_x) ** 2 for x in x_values)
     denom_y = sum((y - mean_y) ** 2 for y in y_values)
 
-
+    # y = mx + b
     # Calculate slope (m) and intercept (b) for linear regression
     slope = numerator / denom_x if denom_x != 0 else 0
     intercept = mean_y - slope * mean_x
 
     # Calculate Pearson correlation coefficient (r)
-    r = numerator / (math.sqrt(denom_x * denom_y)) if denom_x != 0 and denom_y != 0 else 0
+    r = numerator / (math.sqrt(denom_x * denom_y)) if denom_x != 0 or denom_y != 0 else 0
 
 
     print(f"Linear Regression Line: y = {slope:.6f}x + {intercept:.6f}")

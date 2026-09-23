@@ -1,0 +1,112 @@
+# AI Track
+
+A collection of projects and exercises completed while working through the **01Edu AI track**.
+
+The repository focuses on building practical foundations in mathematics, statistics, machine learning, and applied AI through progressively more complex projects.
+
+## Projects
+
+| Project                                                          | Focus                                                           |
+| ---------------------------------------------------------------- | --------------------------------------------------------------- |
+| [`math-skills`](./math-skills)                                   | Statistical and mathematical foundations for AI                 |
+| [`linear-stats`](./linear-stats)                                 | Linear statistics and statistical analysis                      |
+| [`linear-regression`](./linear-regression)                       | Linear regression, model fitting, predictions, and MSE          |
+| [`matrix-factorization-project`](./matrix-factorization-project) | Matrix factorization and dimensionality/recommendation concepts |
+| [`spectral-learning-project`](./spectral-learning-project)       | Spectral methods and machine learning                           |
+| [`credit-scoring`](./credit-scoring)                             | Credit scoring and predictive modeling                          |
+| [`sp500-strategies`](./sp500-strategies)                         | S&P 500 data analysis and trading strategies                    |
+| [`backtesting-sp500`](./backtesting-sp500)                       | Backtesting financial strategies on historical data             |
+| [`guess-it`](./guess-it)                                         | Algorithmic problem-solving project                             |
+| [`guess-it-2`](./guess-it-2)                                     | Extended algorithmic problem-solving project                    |
+
+## Learning Areas
+
+### Mathematics & Statistics
+
+* Descriptive statistics
+* Probability
+* Linear algebra
+* Statistical analysis
+* Data distributions
+* Matrix operations
+* Linear regression
+
+### Machine Learning
+
+* Supervised learning
+* Regression
+* Model fitting
+* Prediction
+* Loss functions
+* Mean Squared Error (MSE)
+* Matrix factorization
+* Spectral learning
+
+### Applied AI & Data
+
+* Financial data analysis
+* Credit scoring
+* S&P 500 strategy development
+* Strategy backtesting
+* Data-driven decision making
+
+### Algorithms
+
+* Problem decomposition
+* Algorithmic thinking
+* Python programming
+* Input/output processing
+* Computational problem solving
+
+## Repository Structure
+
+```text
+AI/
+├── backtesting-sp500/
+├── credit-scoring/
+├── guess-it/
+├── guess-it-2/
+├── linear-regression/
+├── linear-stats/
+├── math-skills/
+├── matrix-factorization-project/
+├── sp500-strategies/
+└── spectral-learning-project/
+```
+
+## Technologies
+
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Scikit-learn
+* Jupyter Notebook
+* Git
+
+Additional libraries may be used within individual projects.
+
+## Purpose
+
+The goal of this repository is to document my progression through the AI track, from mathematical foundations and statistics to machine learning and applied data projects.
+
+Each project is developed as part of the learning process, with an emphasis on understanding the underlying concepts rather than relying solely on high-level libraries.
+
+## Progress
+
+* [x] Mathematics & statistics foundations
+* [x] Linear statistics
+* [x] Linear regression
+* [x] Algorithmic problem solving
+* [x] Matrix factorization
+* [x] Spectral learning
+* [x] Credit scoring
+* [x] S&P 500 strategies
+* [x] Backtesting
+* [ ] Additional AI/ML projects
+
+## Author
+
+**Afolabi Adewale Adeniyi**
+
+Engineering graduate focused on **AI/ML, scientific machine learning, and AI engineering**.

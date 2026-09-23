@@ -14,18 +14,17 @@ def main():
             val = float(line)
         except ValueError:
             continue
-
         history.append(val)
         n = len(history)
 
         if n == 1:
             # Fallback range for the very first point
-            lower = int(val - 70)
-            upper = int(val + 70)
+            lower = int(val - 50)
+            upper = int(val + 50)
         else:
             # Using linear regression over a rolling window to capture the trend
             # A window of size 40 or 50 works best for catching trends without lagging too much
-            window_size = min(n, 45)
+            window_size = min(n, 40)
             window_y = history[-window_size:]
             window_x = list(range(n - len(window_y), n))
             
@@ -37,7 +36,6 @@ def main():
             denom_x = sum((x - mean_x) ** 2 for x in window_x)
 
             # Calculate slope (m) and intercept (b)
-
             m = 0 if denom_x  ==0 else numerator / denom_x 
             b = mean_y - (m * mean_x)
 

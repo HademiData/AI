@@ -3,13 +3,13 @@
 # Python code to calculate the Statistic of a given dataset of numbers
 import math
 
-def ReadFile():
-    with open("math-skills/data.txt", "r") as file:
+def ReadFile(data):
+    with open(f"math-skills/{data}", "r") as file:
         numbers = [float(line.strip()) for line in file]
 
     return numbers
 
-numbers = ReadFile()
+numbers = ReadFile("data.txt")
 print("Numbers: ", numbers)
 
 
@@ -26,7 +26,6 @@ def median(numbers):
         median = (numbers[n//2 - 1] + numbers[n//2]) / 2
     else:
         median = numbers[n//2]
-
     return round(median)
 
 print("Median: ", median(numbers))
