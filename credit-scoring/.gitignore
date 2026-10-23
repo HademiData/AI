@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+home-credit-default-risk/
+
+# Generated model and outputs
+results/model/
+results/clients_outputs/
+results/submission.csv
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS and editor
+.DS_Store
+.vscode/
+.idea/
