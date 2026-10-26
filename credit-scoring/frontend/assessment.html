@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreditView | Credit Assessment</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/index.html">Credit<span>View</span></a>
+    <p class="nav-label">WORKSPACE</p>
+    <nav>
+      <a class="nav-link" href="/index.html">Overview</a>
+      <a class="nav-link active" href="/assessment.html">Credit Assessment</a>
+      <a class="nav-link" href="/explainability.html">Model Explainability</a>
+    </nav>
+    <div class="sidebar-footer">Credit risk intelligence</div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">CUSTOMER RISK ANALYSIS</p>
+        <h1>Credit Assessment</h1>
+        <p class="muted">Find a customer in the test dataset and assess their credit risk.</p>
+      </div>
+    </header>
+
+    <section class="assessment-layout">
+      <article class="panel">
+        <h2>Assess a customer</h2>
+        <p class="muted">Type a customer ID directly or choose a suggestion.</p>
+
+        <form id="assessmentForm">
+          <label for="customerSearch">Customer ID</label>
+          <input
+            id="customerSearch"
+            name="customerId"
+            type="text"
+            inputmode="numeric"
+            placeholder="Enter customer ID, e.g. 100002"
+            autocomplete="off"
+            list="customerSuggestions"
+            required
+          >
+
+          <datalist id="customerSuggestions"></datalist>
+
+          <p id="customerCount" class="muted small">
+            Loading customer suggestions...
+          </p>
+
+          <button class="primary-button" type="submit" id="assessButton">
+            Run assessment
+          </button>
+        </form>
+
+        <p class="muted small">
+          Assessments use existing records from the test dataset. This demo does
+          not accept new customer financial details.
+        </p>
+      </article>
+
+      <article class="panel result-panel" id="resultPanel">
+        <div class="empty-state">
+          <div class="empty-icon">↗</div>
+          <h2>Your result will appear here</h2>
+          <p class="muted">Enter a customer ID and run an assessment to see the estimated risk.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>Predictions are estimates, not lending decisions. The demo threshold is not a validated lending policy.</footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

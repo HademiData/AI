@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreditView | Model Explainability</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/index.html">Credit<span>View</span></a>
+    <p class="nav-label">WORKSPACE</p>
+    <nav>
+      <a class="nav-link" href="/index.html">Overview</a>
+      <a class="nav-link" href="/assessment.html">Credit Assessment</a>
+      <a class="nav-link active" href="/explainability.html">Model Explainability</a>
+    </nav>
+    <div class="sidebar-footer">Credit risk intelligence</div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">HISTORICAL DATA ANALYSIS</p>
+        <h1>Model Explainability</h1>
+        <p class="muted">
+          Explore historical patterns in applicant age, income and requested credit.
+        </p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>Applicant age</h2>
+      <p class="muted">
+        Compare the age profiles of applicants with and without recorded
+        payment difficulties. Each outcome group is scaled separately.
+      </p>
+
+      <div class="explainability-grid">
+        <article class="chart-card">
+          <h3>Age distribution by outcome</h3>
+          <p class="muted">Percentage within each outcome group.</p>
+          <div id="ageDistributionChart" class="data-chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Payment difficulty by age group</h3>
+          <p class="muted">Percentage of applicants with TARGET = 1.</p>
+          <div id="ageRateChart" class="data-chart"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Income and credit</h2>
+      <p class="muted">
+        Compare reported income and requested credit relative to reported income.
+      </p>
+
+      <div class="explainability-grid">
+        <article class="chart-card">
+          <h3>Income distribution</h3>
+          <p class="muted">
+            The top 1% of positive income values is excluded for readability.
+          </p>
+          <div id="incomeDistributionChart" class="data-chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Credit-to-income ratio</h3>
+          <p class="muted">
+            Invalid ratios and ratios above 10 are omitted. The box plot
+            compares the median and spread.
+          </p>
+          <div id="creditIncomeChart" class="data-chart"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel info-panel">
+      <h2>How to interpret these charts</h2>
+      <ul class="interpretation-list">
+        <li>
+          <strong>Age distribution:</strong>
+          compares the age profiles of applicants with and without recorded difficulties.
+          Bar heights show each outcome group's own distribution, not their population sizes.
+        </li>
+        <li>
+          <strong>Age-group rate:</strong>
+          shows the percentage with TARGET = 1 in each age group, allowing fairer
+          comparisons between groups of different sizes.
+        </li>
+        <li>
+          <strong>Income distribution:</strong>
+          shows the shape of reported income within each outcome group, excluding
+          the top 1% of positive values.
+        </li>
+        <li>
+          <strong>Credit-to-income ratio:</strong>
+          compares requested credit with reported income. A higher ratio means
+          the requested credit is larger relative to reported income.
+        </li>
+      </ul>
+
+      <p class="muted">
+        These charts describe historical data, not causes of payment difficulties.
+        TARGET = 1 represents recorded payment difficulties in this dataset,
+        not certainty about future default.
+      </p>
+    </section>
+
+    <footer>
+      CreditView · Historical patterns do not establish causation or determine lending decisions.
+    </footer>
+  </main>
+
+  <script src="/historical-charts.js"></script>
+</body>
+</html>

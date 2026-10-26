@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreditView | Overview</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/index.html">Credit<span>View</span></a>
+    <p class="nav-label">WORKSPACE</p>
+    <nav>
+      <a class="nav-link active" href="/index.html">Overview</a>
+      <a class="nav-link" href="/assessment.html">Credit Assessment</a>
+      <a class="nav-link" href="/explainability.html">Model Explainability</a>
+    </nav>
+    <div class="sidebar-footer">Credit risk intelligence</div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">CREDIT RISK PLATFORM</p>
+        <h1>Overview</h1>
+        <p class="muted">Monitor portfolio patterns and model performance.</p>
+      </div>
+      <span class="status"><span class="status-dot"></span> Model dashboard</span>
+    </header>
+
+    <section class="metrics-grid">
+      <article class="metric-card">
+        <p>Training applications</p>
+        <h2>307,511</h2>
+        <small>Home Credit training dataset</small>
+      </article>
+      <article class="metric-card">
+        <p>Recorded payment difficulties</p>
+        <h2>8.07%</h2>
+        <small>Training dataset default rate</small>
+      </article>
+      <article class="metric-card">
+        <p>Validation ROC-AUC</p>
+        <h2>0.7513</h2>
+        <small>Held-out validation results</small>
+      </article>
+      <article class="metric-card">
+        <p>Validation average precision</p>
+        <h2>0.2388</h2>
+        <small>Precision-recall performance</small>
+      </article>
+    </section>
+
+    <section class="charts-grid">
+      <article class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Training target distribution</h2>
+            <p class="muted">Observed labels in the training dataset</p>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="targetChart"></canvas>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Model performance</h2>
+            <p class="muted">Validation metrics, shown separately</p>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="performanceChart"></canvas>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel info-panel">
+      <h2>About this dashboard</h2>
+      <p>
+        These overview figures summarize the project's training and validation
+        results. They are not live lending data. Use Credit Assessment to run
+        a prediction and Model Explainability to inspect feature importance.
+      </p>
+      <a class="primary-link" href="/assessment.html">Start a credit assessment →</a>
+    </section>
+
+    <footer>CreditView · Model estimates support analysis and are not lending decisions.</footer>
+  </main>
+  <script src="/overview.js"></script>
+</body>
+</html>

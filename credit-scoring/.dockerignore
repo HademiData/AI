@@ -1,0 +1,17 @@
+.git
+.venv
+venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.mypy_cache
+.ipynb_checkpoints
+.streamlit
+.env
+.env.*
+!.env.example
+home-credit-default-risk/application_train.csv
+results/*
+!results/model/
+results/model/*
+!results/model/lightgbm_credit_model.joblib
