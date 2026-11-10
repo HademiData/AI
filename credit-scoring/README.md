@@ -1,4 +1,4 @@
-# CreditLens: Credit Scoring and Risk Analysis
+# CreditView: Credit Scoring and Risk Analysis
 
 ## Overview
 
