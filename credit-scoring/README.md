@@ -2,7 +2,7 @@
 [Live Demo](https://creditview.onrender.com/)
 ## Overview
 
-CreditLens is a machine learning project that estimates the probability of recorded payment difficulties for loan applicants using the Home Credit Default Risk dataset.
+CreditView is a machine learning project that estimates the probability of recorded payment difficulties for loan applicants using the Home Credit Default Risk dataset.
 
 It combines exploratory data analysis, feature engineering, LightGBM classification, model evaluation, SHAP explanations, interactive Plotly visualizations, and a Streamlit dashboard.
 
