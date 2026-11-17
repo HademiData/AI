@@ -181,6 +181,3 @@ Feature contributions describe model behavior, not causation. They should not be
 - Further work could include probability calibration, threshold analysis, fairness evaluation, broader model comparisons, and training on more records.
 - The test dataset has no labels, so its actual predictive performance cannot be measured locally.
 
-## Project Identity
-
-The 01Edu username is recorded in `username.txt`.
